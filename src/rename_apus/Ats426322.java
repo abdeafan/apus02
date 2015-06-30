@@ -26,6 +26,7 @@ public class Ats426322 {
     List<String> list_Src = new ArrayList<>();
     List<String> list_Dst = new ArrayList<>();
 
+    
     public boolean ats426322() {
         list_Src = flSrc.ftpList(ftpserverS, userS, passwordS);
         list_Dst = flDst.ftpList(ftpserverD, userD, passwordD);
