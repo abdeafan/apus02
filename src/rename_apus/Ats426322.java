@@ -25,8 +25,9 @@ public class Ats426322 {
     long mlastTime = curTime;
     List<String> list_Src = new ArrayList<>();
     List<String> list_Dst = new ArrayList<>();
+    int p=0;
 
-    
+
     public boolean ats426322() {
         list_Src = flSrc.ftpList(ftpserverS, userS, passwordS);
         list_Dst = flDst.ftpList(ftpserverD, userD, passwordD);
