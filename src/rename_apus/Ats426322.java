@@ -25,7 +25,6 @@ public class Ats426322 {
     long mlastTime = curTime;
     List<String> list_Src = new ArrayList<>();
     List<String> list_Dst = new ArrayList<>();
-    Boolean dst_Ends, src_Ends;
 
     public boolean ats426322() {
         list_Src = flSrc.ftpList(ftpserverS, userS, passwordS);
@@ -88,10 +87,6 @@ public class Ats426322 {
             mDate = new SimpleDateFormat("yyyyMMdd").format(mlastTime);
 
             for (String name_Src : list_Src) {
-                if (name_Src == null) {
-                    src_Ends = true;
-                    break;
-                }
                 if (name_Src.length() < 22) continue;
                 if (!(name_Src.substring(22, 25).equals("ama"))) continue;
                 if (!(name_Src.contains(mDate))) continue;

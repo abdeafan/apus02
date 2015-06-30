@@ -4,7 +4,6 @@ import it.sauronsoftware.ftp4j.FTPFile;
 import it.sauronsoftware.ftp4j.FTPClient;
 
 import java.io.File;
-import java.io.FileInputStream;
 
 
 public class FtpPut {
@@ -29,11 +28,8 @@ public class FtpPut {
                 return false;
             }
 
-            //FileInputStream input = new FileInputStream(fileToFTP);
-            //ftp.storeFile(mPath + "/" + fileToFTP, input);
             File input = new File(fileToFTP);
             ftp.upload(input);
-            //input.close();
             ftp.disconnect(true);
         } catch (Exception ex) {
             System.out.println("---EE--- FTPput module error: " + ex.getMessage());
